@@ -16,14 +16,15 @@ ACCION 4.9(primC : puntero a encriptar) ES
 
         Arr : Arreglo [1...255] de caracteres
 
-        nn, i, D, cant, num, numsal, x, z : entero
+        nn, D, cant, num, numsal, x: entero
+
     PROCESO
         cant := 0
         Escribir("Ingrese un texto de 255 caracteres como máximo: ")
         nn := 255
         Para D := 1 hasta 255 hacer
-            Escribir("Ingrese una letra ", "("nn, " caracteres restantes): ")
-            Leer(Arr[i])
+            Escribir("Ingrese una letra ", "(", nn, " caracteres restantes): ")
+            Leer(Arr[D])
             nn := nn - 1
             cant := cant + 1
         Fin Para
@@ -44,8 +45,20 @@ ACCION 4.9(primC : puntero a encriptar) ES
 
             Nuevo(qs)
             *qs.dato := x
+            *qs.prox := null
             Si primS = null entonces
-                *qs.prox := primS
                 primS := qs
                 ps := qs
             Sino
+                *ps.prox := qs
+                ps := qs
+            Fin Si
+            pc := *pc.prox
+        Fin Para
+        ps := primS
+        Mientras ps <> null hacer
+            Escribir(*ps.dato)
+                ps := *ps.prox
+            Fin Mientras
+Fin ACCION
+

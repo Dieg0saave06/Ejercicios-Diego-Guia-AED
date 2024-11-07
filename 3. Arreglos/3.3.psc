@@ -1,6 +1,6 @@
 ACCION 3.3(arg : array [1...n] de entero) ES
     AMBIENTE
-        x, acum : entero
+        x, acum, D : entero
     
     PROCESO
         Escribir("Ingresa un valor: ")

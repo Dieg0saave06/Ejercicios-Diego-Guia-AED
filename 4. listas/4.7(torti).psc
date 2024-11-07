@@ -27,16 +27,16 @@ ACCION cuarentaysiete() Es
             Si v <> " " entonces
                 q := prim 
         
-                Mientras (q <> null) y (v > *q.dato.letra) hacer
+                Mientras (q <> null) y (v > *q.letra) hacer
                     ant := q 
                     q := *q.prox
                 Fin Mientras
-                Si v = *q.dato.letra entonces
-                    *q.dato.cant := *q.dato.cant + 1
+                Si v = *q.letra entonces
+                    *q.cant := *q.cant + 1
                 Sino                    
                     Nuevo(p)
-                    *p.dato.letra := v
-                    *p.prox.cant := 1
+                    *p.letra := v
+                    *p.cant := 1
                     Si q = prim entonces
                         *p.prox := prim
                         prim := p
@@ -50,15 +50,15 @@ ACCION cuarentaysiete() Es
         Fin Mientras
         q := prim
         Mientras q <> null hacer
-            Escribir("La letra ", *p.dato.letra, " se repitió ", *p.dato.cant, " cantidad de veces.")
-            Si *q.dato.cant < MenorF entonces
-                MenorF := *q.dato.cant
-                MenorL := *q.dato.letra
+            Escribir("La letra ", *p.letra, " se repitió ", *p.cant, " cantidad de veces.")
+            Si *q.cant < MenorF entonces
+                MenorF := *q.cant
+                MenorL := *q.letra
             Fin Si
             
-            Si *q.dato.cant > MayorF entonces
-                MayorF := *q.dato.cant
-                MayorL := *q.dato.letra
+            Si *q.cant > MayorF entonces
+                MayorF := *q.cant
+                MayorL := *q.letra
             Fin Si
             q := *q.prox
         Fin Mientras
