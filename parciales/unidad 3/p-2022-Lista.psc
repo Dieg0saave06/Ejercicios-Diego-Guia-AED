@@ -62,12 +62,12 @@ ACCION ejercicio1(prim : Puntero a NodoC) ES
                     *p.ant := null
                     *p.prox := null
                     *p.ApeyNom := Reg_s.ApeyNom
-                    *p.chances_tot := 5 + (Arch_c.imp_total div 100)
+                    *p.chances_tot := 5 + (reg_c.imp_total div 100)
                     channnces()
                     prim1 := p
                 Sino
                     ult := prim1
-                    Mientras (ult <> null) y (Reg_s.ApeyNom > *ult.ApeyNom ) hacer
+                    Mientras (*ult.prox <> null) y (Reg_s.ApeyNom > *ult.ApeyNom) hacer
                         atras := ult
                         ult := *ult.prox
                     Fin Mientras
@@ -87,7 +87,9 @@ ACCION ejercicio1(prim : Puntero a NodoC) ES
                             *atras.prox := p
                             *p.ant := atras
                             *p.prox := ult
-                            *ult.ant := p
+                            Si (Reg_s.ApeyNom < *ult.ApeyNom) entonces
+                                *ult.ant := p
+                            Fin Si
                         Fin Si
                     Fin Si
                 Fin Si
