@@ -67,7 +67,7 @@ ACCION ejercicio1(prim : Puntero a NodoC) ES
                     prim1 := p
                 Sino
                     ult := prim1
-                    Mientras (*ult.prox <> null) y (Reg_s.ApeyNom > *ult.ApeyNom) hacer
+                    Mientras (ult <> null) y (Reg_s.ApeyNom > *ult.ApeyNom) hacer
                         atras := ult
                         ult := *ult.prox
                     Fin Mientras
@@ -87,7 +87,7 @@ ACCION ejercicio1(prim : Puntero a NodoC) ES
                             *atras.prox := p
                             *p.ant := atras
                             *p.prox := ult
-                            Si (Reg_s.ApeyNom < *ult.ApeyNom) entonces
+                            Si (Reg_s.ApeyNom <> null) entonces
                                 *ult.ant := p
                             Fin Si
                         Fin Si
