@@ -9,13 +9,6 @@ hacia el área de Mantenimiento (que destino comience con 1).
 2- Contar la cantidad de mensajes que se dirigen hacia el área de sistemas (que destino comience con 23)."
 
 
-DDDoooCCC
-
-230 god 011
-
-d := 12
-para i := 1 hasta d
-
 ACCION 2.1.32() ES
     AMBIENTE
         s, s_sal : secuencia de caracteres
