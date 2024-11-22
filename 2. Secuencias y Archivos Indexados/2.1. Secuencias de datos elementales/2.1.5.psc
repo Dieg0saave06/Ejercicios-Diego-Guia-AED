@@ -2,7 +2,7 @@
 Se desea generar una secuencia que contenga los números de socios que no figuran en la secuencia de socios."
 
 
-ACCION 2,1,5 es
+ACCION 2,1,5() es
     AMBIENTE
         S, Sal: Secuencia de enteros
         V, cont: Entero

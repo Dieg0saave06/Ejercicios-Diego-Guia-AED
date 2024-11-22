@@ -33,7 +33,7 @@ ACCION ejercicio1(prim : Puntero a NodoC) ES
             prox : puntero a Nodo
         FR
 
-        p, q, prim1, ult, atras : puntero a Nodo
+        p, prim1, ult, atras : puntero a Nodo
         num, D := entero
         aux := puntero a NodoC
 
@@ -87,7 +87,7 @@ ACCION ejercicio1(prim : Puntero a NodoC) ES
                             *atras.prox := p
                             *p.ant := atras
                             *p.prox := ult
-                            Si (Reg_s.ApeyNom <> null) entonces
+                            Si (ult <> null) entonces
                                 *ult.ant := p
                             Fin Si
                         Fin Si
