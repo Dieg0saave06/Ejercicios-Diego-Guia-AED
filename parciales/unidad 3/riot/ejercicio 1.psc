@@ -44,7 +44,7 @@ ACCION RIOT(prim : puntero a Servidores) ES
         s := prim
 
         Mientras NFDA(cliente) hacer    
-            Hacer (*s.Estado = "Libre") y (*s.CantUsuarios < 10) entonces
+            Mientras (*s.Estado = "Libre") y (*s.CantUsuarios < 10) entonces
                 Nuevo(p)
                 *p.NomCli := reg_cli.NomCli
                 *p.Servidor := *s.Servidor

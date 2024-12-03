@@ -2,7 +2,7 @@
 Se dispone de una secuencia de caracteres. Se desea determinar la cantidad de palabras que comienzan con la letra 'I'."
 
 
-ACCION ZahiraOtaku() es
+ACCION 2.1.9() es
     AMBIENTE
         S: Secuencia de caracteres
         V: Caracter

@@ -2,7 +2,7 @@
 Dada una secuencia de letras del alfabeto que finaliza con una marca '*', contar cuantas letras "A" hay en la secuencia."
 
 
-ACCION maximaleta() es
+ACCION 2.1.1() es
     AMBIENTE    
         S: Secuencia de caracteres
         V: caracter

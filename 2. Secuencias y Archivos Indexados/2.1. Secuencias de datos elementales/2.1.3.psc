@@ -2,7 +2,7 @@
 Se dispone de una secuencia de caracteres y se desea obtener una secuencia de salida que resulte 
 de copiar la secuencia de entrada, descartando el caracter "$"."
 
-ACCION FrancoRubik() es
+ACCION 2.1.3() es
     AMBIENTE
         S, SS: Secuencia de caracteres
         V: Caracter
